@@ -1,0 +1,503 @@
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE DATABASE "D_4_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "D_4_test" ENCODING = 'unicode'[0m
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:00:40 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/inforcap/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/inforcap/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.3ms | Allocations: 637)
+Completed 200 OK in 92ms (Views: 23.0ms | ActiveRecord: 0.0ms | Allocations: 7122)
+
+
+  [1m[35m (33.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6776923406557135440)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCharacters (20230630040100)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "characters" ("id" bigserial primary key, "name" character varying, "location" character varying, "house" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230630040100"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-06-30 04:12:47.111212"], ["updated_at", "2023-06-30 04:12:47.111212"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6776923406557135440)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (1.4ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Godric Gryffindor"], ["location", "The Three Broomsticks"], ["house", "Gryffindor"], ["created_at", "2023-06-30 04:26:12.693094"], ["updated_at", "2023-06-30 04:26:12.693094"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.5ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Angelina Johnson"], ["location", "Diagon Alley"], ["house", "Thunderbird"], ["created_at", "2023-06-30 04:26:12.700576"], ["updated_at", "2023-06-30 04:26:12.700576"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.3ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Septima Vector"], ["location", "Diagon Alley"], ["house", "Pukwudgie"], ["created_at", "2023-06-30 04:26:12.706109"], ["updated_at", "2023-06-30 04:26:12.706109"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.4ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Peter Pettigrew"], ["location", "Slug and Jiggers Apothecary"], ["house", "Wampus"], ["created_at", "2023-06-30 04:26:12.711169"], ["updated_at", "2023-06-30 04:26:12.711169"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.4ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Rabastan Lestrange"], ["location", "Twilfitt and Tatting's"], ["house", "Hufflepuff"], ["created_at", "2023-06-30 04:26:12.716116"], ["updated_at", "2023-06-30 04:26:12.716116"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.3ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Rita Skeeter"], ["location", "Mahoutokoro"], ["house", "Wampus"], ["created_at", "2023-06-30 04:26:12.721142"], ["updated_at", "2023-06-30 04:26:12.721142"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.4ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Aragog"], ["location", "Godric's Hollow"], ["house", "Thunderbird"], ["created_at", "2023-06-30 04:26:12.725987"], ["updated_at", "2023-06-30 04:26:12.725987"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.4ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Fluffy"], ["location", "Sinner's End"], ["house", "Wampus"], ["created_at", "2023-06-30 04:26:12.731053"], ["updated_at", "2023-06-30 04:26:12.731053"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.5ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Olympe Maxime"], ["location", "The Burrow"], ["house", "Horned Serpent"], ["created_at", "2023-06-30 04:26:12.736601"], ["updated_at", "2023-06-30 04:26:12.736601"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Broderick Bode"], ["location", "The Leaky Cauldron"], ["house", "Gryffindor"], ["created_at", "2023-06-30 04:26:12.742195"], ["updated_at", "2023-06-30 04:26:12.742195"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.4ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Ignotus Peverell"], ["location", "Honeydukes"], ["house", "Gryffindor"], ["created_at", "2023-06-30 04:26:12.748592"], ["updated_at", "2023-06-30 04:26:12.748592"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.5ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Everard"], ["location", "Flourish & Blotts"], ["house", "Ravenclaw"], ["created_at", "2023-06-30 04:26:12.753710"], ["updated_at", "2023-06-30 04:26:12.753710"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Regulus Arcturus Black"], ["location", "Flourish & Blotts"], ["house", "Slytherin"], ["created_at", "2023-06-30 04:26:12.758757"], ["updated_at", "2023-06-30 04:26:12.758757"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.5ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Charity Burbage"], ["location", "Magical Menagerie"], ["house", "Thunderbird"], ["created_at", "2023-06-30 04:26:12.763784"], ["updated_at", "2023-06-30 04:26:12.763784"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Remus Lupin"], ["location", "Borgin & Burkes"], ["house", "Pukwudgie"], ["created_at", "2023-06-30 04:26:12.769105"], ["updated_at", "2023-06-30 04:26:12.769105"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:32:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:13
+  Rendered pages/index.html.erb within layouts/application (Duration: 36.0ms | Allocations: 12178)
+  Rendered layout layouts/application.html.erb (Duration: 38.0ms | Allocations: 12288)
+Completed 500 Internal Server Error in 599ms (ActiveRecord: 5.1ms | Allocations: 293853)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `char' for #<ActionView::Base:0x0000000000b9c8>
+
+@output_buffer.safe_append='                <td> '.freeze;@output_buffer.append=( image_tag("Gryffindor.png", alt: char.house, title: char.house, height:200));@output_buffer.safe_append='
+                                                                                                                   ^^^^):
+    16:             <td><%= character.location %></td>
+    17:             <% case character.house %>
+    18:               <% when "Gryffindor"%>
+    19:                 <td> <%= image_tag("Gryffindor.png", alt: char.house, title: char.house, height:200)%>
+    20:               <% when "Hufflepuff"%>
+    21:                 <td> <%= image_tag("Hufflepuff.png", alt: char.house, title: char.house, height:200)%>
+    22:               <% when "Slytherin"%>
+  
+app/views/pages/index.html.erb:19
+app/views/pages/index.html.erb:13
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:33:56 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:13
+  Rendered pages/index.html.erb within layouts/application (Duration: 5107.9ms | Allocations: 128001)
+  Rendered layout layouts/application.html.erb (Duration: 5230.8ms | Allocations: 164435)
+Completed 500 Internal Server Error in 5262ms (ActiveRecord: 0.6ms | Allocations: 165527)
+
+
+  
+ActionView::Template::Error (Asset `popper.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link popper.js
+
+and restart your server):
+     7:     <%= csrf_meta_tags %>
+     8:     <%= csp_meta_tag %>
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started POST "/__web_console/repl_sessions/5252629cd8acf55bcc2b9e62c0a8fdde/trace" for 127.0.0.1 at 2023-06-30 00:34:23 -0400
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:36:23 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:13
+  Rendered pages/index.html.erb within layouts/application (Duration: 47.2ms | Allocations: 8826)
+  Rendered layout layouts/application.html.erb (Duration: 178.4ms | Allocations: 43535)
+Completed 500 Internal Server Error in 189ms (ActiveRecord: 3.1ms | Allocations: 44811)
+
+
+  
+ActionView::Template::Error (Asset `popper.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link popper.js
+
+and restart your server):
+     7:     <%= csrf_meta_tags %>
+     8:     <%= csp_meta_tag %>
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:38:36 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:13
+  Rendered pages/index.html.erb within layouts/application (Duration: 79.6ms | Allocations: 7526)
+  Rendered layout layouts/application.html.erb (Duration: 246.2ms | Allocations: 42451)
+Completed 500 Internal Server Error in 257ms (ActiveRecord: 0.3ms | Allocations: 43537)
+
+
+  
+ActionView::Template::Error (Asset `popper.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link popper.js
+
+and restart your server):
+     7:     <%= csrf_meta_tags %>
+     8:     <%= csp_meta_tag %>
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags%>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started POST "/__web_console/repl_sessions/470cf1840a465736b713f1a81a9cc824/trace" for 127.0.0.1 at 2023-06-30 00:38:47 -0400
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:39:24 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (2.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:13
+  Rendered pages/index.html.erb within layouts/application (Duration: 83.8ms | Allocations: 7520)
+  Rendered layout layouts/application.html.erb (Duration: 188.4ms | Allocations: 42448)
+Completed 500 Internal Server Error in 202ms (ActiveRecord: 2.7ms | Allocations: 43520)
+
+
+  
+ActionView::Template::Error (Asset `popper.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link popper.js
+
+and restart your server):
+     7:     <%= csrf_meta_tags %>
+     8:     <%= csp_meta_tag %>
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags%>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:39:27 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:13
+  Rendered pages/index.html.erb within layouts/application (Duration: 49.4ms | Allocations: 6751)
+  Rendered layout layouts/application.html.erb (Duration: 172.5ms | Allocations: 41345)
+Completed 500 Internal Server Error in 179ms (ActiveRecord: 0.6ms | Allocations: 41624)
+
+
+  
+ActionView::Template::Error (Asset `popper.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link popper.js
+
+and restart your server):
+     7:     <%= csrf_meta_tags %>
+     8:     <%= csp_meta_tag %>
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags%>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:39:51 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:13
+  Rendered pages/index.html.erb within layouts/application (Duration: 47.8ms | Allocations: 7529)
+  Rendered layout layouts/application.html.erb (Duration: 71.0ms | Allocations: 12168)
+Completed 200 OK in 94ms (Views: 88.5ms | ActiveRecord: 0.3ms | Allocations: 13296)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:43:11 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (1.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:13
+  Rendered pages/index.html.erb within layouts/application (Duration: 62.2ms | Allocations: 7509)
+  Rendered layout layouts/application.html.erb (Duration: 83.7ms | Allocations: 14551)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 1.7ms | Allocations: 15636)
+
+
+  
+ActionView::Template::Error (The asset "fontawesome-all.min.css" is not present in the asset pipeline.
+):
+     8:     <%= csp_meta_tag %>
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     
+    11:     <%= stylesheet_link_tag "fontawesome-all.min" %>
+    12:     <%= stylesheet_link_tag "main" %>
+    13:     <%= stylesheet_link_tag "noscript" %>
+    14:   </head>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:44:09 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:13
+  Rendered pages/index.html.erb within layouts/application (Duration: 49.8ms | Allocations: 6743)
+  Rendered layout layouts/application.html.erb (Duration: 65.6ms | Allocations: 13419)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 0.3ms | Allocations: 13688)
+
+
+  
+ActionView::Template::Error (The asset "fontawesome-all.min.css" is not present in the asset pipeline.
+):
+     8:     <%= csp_meta_tag %>
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     
+    11:     <%= stylesheet_link_tag "fontawesome-all.min" %>
+    12:     <%= stylesheet_link_tag "main" %>
+    13:     <%= stylesheet_link_tag "noscript" %>
+    14:   </head>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:44:11 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:13
+  Rendered pages/index.html.erb within layouts/application (Duration: 63.0ms | Allocations: 6743)
+  Rendered layout layouts/application.html.erb (Duration: 80.1ms | Allocations: 13419)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 0.5ms | Allocations: 13665)
+
+
+  
+ActionView::Template::Error (The asset "fontawesome-all.min.css" is not present in the asset pipeline.
+):
+     8:     <%= csp_meta_tag %>
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     
+    11:     <%= stylesheet_link_tag "fontawesome-all.min" %>
+    12:     <%= stylesheet_link_tag "main" %>
+    13:     <%= stylesheet_link_tag "noscript" %>
+    14:   </head>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:45:39 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:13
+  Rendered pages/index.html.erb within layouts/application (Duration: 76.8ms | Allocations: 7521)
+  Rendered layout layouts/application.html.erb (Duration: 104.4ms | Allocations: 12269)
+Completed 200 OK in 117ms (Views: 108.9ms | ActiveRecord: 0.2ms | Allocations: 13348)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:51:40 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:13
+  Rendered pages/index.html.erb within layouts/application (Duration: 74.4ms | Allocations: 10379)
+  Rendered layout layouts/application.html.erb (Duration: 86.6ms | Allocations: 15103)
+Completed 200 OK in 97ms (Views: 91.7ms | ActiveRecord: 4.2ms | Allocations: 16209)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:52:04 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:13
+  Rendered pages/index.html.erb within layouts/application (Duration: 38.6ms | Allocations: 7504)
+  Rendered layout layouts/application.html.erb (Duration: 61.3ms | Allocations: 12240)
+Completed 200 OK in 80ms (Views: 67.9ms | ActiveRecord: 0.4ms | Allocations: 13350)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:52:22 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:13
+  Rendered pages/index.html.erb within layouts/application (Duration: 52.7ms | Allocations: 7505)
+  Rendered layout layouts/application.html.erb (Duration: 67.1ms | Allocations: 12248)
+Completed 200 OK in 80ms (Views: 74.0ms | ActiveRecord: 0.6ms | Allocations: 13362)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:53:34 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:13
+  Rendered pages/index.html.erb within layouts/application (Duration: 49.6ms | Allocations: 7521)
+  Rendered layout layouts/application.html.erb (Duration: 71.2ms | Allocations: 12272)
+Completed 200 OK in 96ms (Views: 76.2ms | ActiveRecord: 0.6ms | Allocations: 13382)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:54:07 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:13
+  Rendered pages/index.html.erb within layouts/application (Duration: 53.8ms | Allocations: 7505)
+  Rendered layout layouts/application.html.erb (Duration: 66.5ms | Allocations: 12252)
+Completed 200 OK in 81ms (Views: 70.6ms | ActiveRecord: 0.3ms | Allocations: 13362)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:55:47 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:13
+  Rendered pages/index.html.erb within layouts/application (Duration: 51.7ms | Allocations: 7505)
+  Rendered layout layouts/application.html.erb (Duration: 73.1ms | Allocations: 12237)
+Completed 200 OK in 86ms (Views: 80.1ms | ActiveRecord: 0.4ms | Allocations: 13347)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:56:08 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:13
+  Rendered pages/index.html.erb within layouts/application (Duration: 48.3ms | Allocations: 7505)
+  Rendered layout layouts/application.html.erb (Duration: 71.6ms | Allocations: 12246)
+Completed 200 OK in 82ms (Views: 76.5ms | ActiveRecord: 0.4ms | Allocations: 13356)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:56:34 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:14
+  Rendered pages/index.html.erb within layouts/application (Duration: 59.3ms | Allocations: 7506)
+  Rendered layout layouts/application.html.erb (Duration: 75.1ms | Allocations: 12250)
+Completed 200 OK in 85ms (Views: 79.7ms | ActiveRecord: 0.2ms | Allocations: 13360)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:56:48 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:14
+  Rendered pages/index.html.erb within layouts/application (Duration: 56.1ms | Allocations: 7506)
+  Rendered layout layouts/application.html.erb (Duration: 68.4ms | Allocations: 12250)
+Completed 200 OK in 87ms (Views: 81.8ms | ActiveRecord: 0.3ms | Allocations: 13360)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:57:14 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:17
+  Rendered pages/index.html.erb within layouts/application (Duration: 57.8ms | Allocations: 7509)
+  Rendered layout layouts/application.html.erb (Duration: 69.1ms | Allocations: 12226)
+Completed 200 OK in 79ms (Views: 73.4ms | ActiveRecord: 0.5ms | Allocations: 13336)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:57:52 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:17
+  Rendered pages/index.html.erb within layouts/application (Duration: 49.8ms | Allocations: 7509)
+  Rendered layout layouts/application.html.erb (Duration: 79.4ms | Allocations: 12238)
+Completed 200 OK in 90ms (Views: 83.6ms | ActiveRecord: 0.3ms | Allocations: 13348)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:58:39 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:17
+  Rendered pages/index.html.erb within layouts/application (Duration: 70.9ms | Allocations: 7509)
+  Rendered layout layouts/application.html.erb (Duration: 88.7ms | Allocations: 12244)
+Completed 200 OK in 116ms (Views: 94.4ms | ActiveRecord: 0.7ms | Allocations: 13354)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:59:14 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:17
+  Rendered pages/index.html.erb within layouts/application (Duration: 61.0ms | Allocations: 7509)
+  Rendered layout layouts/application.html.erb (Duration: 82.5ms | Allocations: 12244)
+Completed 200 OK in 95ms (Views: 87.4ms | ActiveRecord: 0.2ms | Allocations: 13354)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-30 00:59:52 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:17
+  Rendered pages/index.html.erb within layouts/application (Duration: 52.8ms | Allocations: 7510)
+  Rendered layout layouts/application.html.erb (Duration: 65.2ms | Allocations: 12260)
+Completed 200 OK in 79ms (Views: 71.9ms | ActiveRecord: 0.4ms | Allocations: 13370)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-30 01:00:14 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:19
+  Rendered pages/index.html.erb within layouts/application (Duration: 85.3ms | Allocations: 7528)
+  Rendered layout layouts/application.html.erb (Duration: 99.9ms | Allocations: 12260)
+Completed 200 OK in 112ms (Views: 105.9ms | ActiveRecord: 0.6ms | Allocations: 13371)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-30 01:02:32 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:19
+  Rendered pages/index.html.erb within layouts/application (Duration: 43.9ms | Allocations: 6726)
+  Rendered layout layouts/application.html.erb (Duration: 53.7ms | Allocations: 11172)
+Completed 200 OK in 60ms (Views: 55.8ms | ActiveRecord: 0.4ms | Allocations: 11466)
+
+
