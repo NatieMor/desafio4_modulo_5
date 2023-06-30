@@ -1,0 +1,47 @@
+<br>
+<br>
+<h1 class="text-center"> <b> Vista del controlador Pages </b></h1>
+<br>
+      <h2 class="text-center"> <i> informacion básica de los personajes </i> </h2>
+      <br>
+      <br>
+      <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr class="text-dark bg-danger">
+            <th><b>Name</b></th>
+            <th><b>Location</b></th>
+            <th><b>House</b></th>
+          </tr>
+        </thead>
+        <br>
+        <tbody>
+          <% @characteres.each do |character| %>
+          <tr class="text-dark">
+            <td><h3><%= character.name %></h3></td>
+            <td><%= character.location %></td>
+            <% case character.house %>
+              <% when "Gryffindor"%>
+                <td> <%= image_tag("Gryffindor.png", alt: character.house, title: character.house, height:200)%>
+              <% when "Hufflepuff"%>
+                <td> <%= image_tag("Hufflepuff.png", alt: character.house, title: character.house, height:200)%>
+              <% when "Slytherin"%>
+                <td> <%= image_tag("Slytherin.png", alt: character.house, title: character.house, height:200)%>
+              <% when "Ravenclaw"%>
+                <td> <%= image_tag("Ravenclaw.png", alt: character.house, title: character.house, height:200)%>
+              <% when "Horned Serpent"%>
+                <td> <%= image_tag("Horned Serpent.webp", alt: character.house, title: character.house, height:200)%>
+              <% when "Pukwudgie"%>
+                <td> <%= image_tag("Pukwudgie.webp", alt: character.house, title: character.house, height:200)%>
+              <% when "Wampus"%>
+                <td> <%= image_tag("Wampus.webp", alt: character.house, title: character.house, height:200)%>
+              <% when "Thunderbird"%>
+                <td> <%= image_tag("Thunderbird.webp", alt: character.house, title: character.house, height:200)%>
+              <% else %>
+                <td> <%= image_tag("desconocido.webp", alt: character.house, title: character.house, height:200)%>
+            <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+</div>
